@@ -1,7 +1,9 @@
-var gulp = require('gulp');
-var jasmine = require('gulp-jasmine');
+var gulp = require("gulp");
+var jasmine = require("gulp-jasmine");
  
-gulp.task('default', function () {
-  return gulp.src('indexSpec.js')
+gulp.task("test", function () {
+  return gulp.src("indexSpec.js")
     .pipe(jasmine({verbose: true}));
 });
+
+gulp.task("default", ["test"]);
