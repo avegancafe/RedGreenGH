@@ -1,0 +1,23 @@
+{
+  "name": "redgreengh",
+  "version": "1.0.0",
+  "description": "Run unit tests and see physical responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleLH/RedGreenGH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyleLH/RedGreenGH/issues"
+  },
+  "homepage": "https://github.com/KyleLH/RedGreenGH#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.2.1"
+  }
+}
