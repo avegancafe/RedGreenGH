@@ -10,6 +10,6 @@ post '/' do
   # puts JSON.pretty_generate(@payload)
   puts `rm -rf #{@payload["repository"]["name"]}`
   puts `git clone #{@payload["repository"]["git_url"]}`
-  puts `cd #{@payload["repository"]["name"]} && gulp test`
+  puts `cd #{@payload["repository"]["name"]} && npm install && gulp test`
 end
 
