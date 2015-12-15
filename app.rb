@@ -27,5 +27,6 @@ post '/' do
       red.on
       sleep 5
       red.off
+  end
 end
 
