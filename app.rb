@@ -18,7 +18,7 @@ post '/' do
   puts `git clone #{@payload["repository"]["git_url"]}`
   yellow.off
   green.on
-  puts `cd #{@payload["repository"]["name"]} && npm install && gulp test`
+  puts `cd #{@payload["repository"]["name"]}; npm install;  gulp test`
   sleep 5
   green.off
 end
