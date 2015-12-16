@@ -17,16 +17,16 @@ post '/' do
   puts `git clone #{@payload["repository"]["git_url"]}`
   puts "the name of the repo is: #{@payload["repository"]["name"]}"
   # puts JSON.pretty_generate(@payload)
-  puts `cd #{@payload["repository"]["name"]}; npm install;`
+  puts `cd #{@payload["repository"]["name"]};`
   res = `gulp test`
   yellow.off
   if res =~ /0\sfailures/
       green.on
-      sleep 5
+      sleep 10
       green.off
   else
       red.on
-      sleep 5
+      sleep 10
       red.off
   end
 end
