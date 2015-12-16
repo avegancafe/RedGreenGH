@@ -14,9 +14,9 @@ post '/' do
 
   puts "The url: #{@payload["repository"]["git_url"]}"
   # puts JSON.pretty_generate(@payload)
-  `rm -rf #{@payload["repository"]["name"]}`
+  puts `rm -rf #{@payload["repository"]["name"]}`
   puts `git clone #{@payload["repository"]["git_url"]}`
-  `cd #{@payload["repository"]["name"]}`
+  puts `cd #{@payload["repository"]["name"]}`
   res = `gulp test`
   yellow.off
   if res =~ /0\sfailures/
