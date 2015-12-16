@@ -18,7 +18,7 @@ post '/' do
   puts "the name of the repo is: #{@payload["repository"]["name"]}"
   # puts JSON.pretty_generate(@payload)
   puts `cd #{@payload["repository"]["name"]};`
-  res = `gulp test`
+  puts (res = `gulp test`)
   yellow.off
   if res =~ /0\sfailures/
       green.on
