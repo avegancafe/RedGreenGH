@@ -1,5 +1,5 @@
 function testFunc (someVal) {
-  return someVal + 1;
+  return someVal + 2;
 }
 
 module.exports = testFunc;
