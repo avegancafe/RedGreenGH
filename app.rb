@@ -15,6 +15,7 @@ post '/' do
   puts "The url: #{@payload["repository"]["git_url"]}"
   puts `rm -rf #{@payload["repository"]["name"]}`
   puts `git clone #{@payload["repository"]["git_url"]}`
+  puts "the name of the repo is: #{@payload["repository"]["name"]}"
   # puts JSON.pretty_generate(@payload)
   puts `cd #{@payload["repository"]["name"]}; npm install;`
   res = `gulp test`
